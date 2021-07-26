@@ -22,6 +22,10 @@ public class Main {
 	private static Integer sumNumbers(List<Integer> list) {
 		return list.stream().reduce(0, (n, m) -> n + m);
 	}
+	
+	private static Integer multiplyNumbers(List<Integer> list) {
+		return list.stream().reduce(1, (n, m) -> n * m);
+	}
 
 	public static void main(String[] args) {
 
@@ -38,6 +42,9 @@ public class Main {
 
 		Integer sum = sumNumbers(numbersAsList);
 		System.out.println(sum);
+		
+		Integer multipliedNumbers = multiplyNumbers(numbersAsList);
+		System.out.println(multipliedNumbers);
 
 		printNumbers(numbersAsList);
 	}
